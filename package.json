@@ -1,0 +1,15 @@
+{
+  "name": "express-mongoapp",
+  "version": "1.0.0",
+  "description": "basic routing with express by using the database mongodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "surya <suryateja55555@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
