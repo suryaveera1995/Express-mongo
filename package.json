@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "mocha test/test.js"
+    "test": "mocha --reporter json test/test.js"
   },
   "author": "surya <suryateja55555@gmail.com>",
   "license": "ISC",

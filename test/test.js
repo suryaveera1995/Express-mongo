@@ -19,6 +19,7 @@ describe('post /names/save',()=>{
       should.not.exist(err);
       res.status.should.equal(200);
       res.body.should.be.a('object');
+      console.log(res.body);
       done();
     });
   });
