@@ -24,3 +24,18 @@ describe('post /names/save',()=>{
   });
 });
 
+// get names
+
+describe('get /names/view',()=>{
+  it('should get all the names',(done)=>{
+    chai.request(server)
+    .get('/names/view/')
+    .end((err,res)=>{
+      should.not.exist(err);
+      res.body.should.be.a('Array');
+      res.status.should.equal(200);
+      console.log(res.body);
+      done();
+    });
+  });
+});

@@ -4,7 +4,8 @@
   "description": "basic routing with express by using the database mongodb",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha test/test.js"
   },
   "author": "surya <suryateja55555@gmail.com>",
   "license": "ISC",
