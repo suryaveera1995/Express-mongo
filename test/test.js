@@ -7,7 +7,7 @@ let request = require('supertest');
 let chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 
-// post names
+// post with an id, Firstname and Lastname
 
 describe('post /names/save',()=>{
   it('should save the names',(done)=>{
@@ -25,7 +25,7 @@ describe('post /names/save',()=>{
   });
 });
 
-// get names
+// get all the names in the collection
 
 describe('get /names/view',()=>{
   it('should get all the names',(done)=>{
@@ -37,6 +37,21 @@ describe('get /names/view',()=>{
       res.status.should.equal(200);
       console.log(res.body);
       done();
+    });
+  });
+});
+
+// update the names that are saved in the collection using jobid
+
+describe('patch /names/update',()=>{
+  it('should update the given name',(done)=>{
+    chai.request(server)
+    .patch('/names/update')
+    .send({id:'10',Firstname:'surya',Lastname:'teja'})
+    .end((err,res)=>{
+      res.should.have.status(200);
+      res.body.should.be.a('object');
+    done();
     });
   });
 });
